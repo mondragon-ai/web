@@ -15,6 +15,7 @@ import { BillingInterval } from "./helpers/ensure-billing.js";
 import { AppInstallations } from "./app_installations.js";
 
 import firestoreSessionDB from './lib/custom-firestore.js'
+import sellingPlanCreator from "./helpers/create-selling-plan.js";
 
 const USE_ONLINE_TOKENS = false;
 const TOP_LEVEL_OAUTH_COOKIE = "shopify_top_level_oauth";
@@ -162,7 +163,7 @@ export async function createServer(
     let error = null;
 
     try {
-      await productCreator(session);
+      await sellingPlanCreator(session);
     } catch (e) {
       console.log(`Failed to process products/create: ${e.message}`);
       status = 500;
