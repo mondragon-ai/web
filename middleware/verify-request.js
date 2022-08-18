@@ -23,7 +23,7 @@ export default function verifyRequest(
       app.get("use-online-tokens")
     );
 
-    console.log("26: Sesson - verify.js -- \n", session.isActive())
+    console.log("26: Sesson - verify.js -- \n", session)
 
     let shop = Shopify.Utils.sanitizeShop(req.query.shop);
     if (session && shop && session.shop !== shop) {
