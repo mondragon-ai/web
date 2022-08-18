@@ -39,21 +39,21 @@ export default async function sellingPlanCreator(session, ) {
                         options: ["15"],
                         deliveryPolicy: {
                             recurring: {
-                                anchors: { day: 15, type: MONTHDAY },
-                                preAnchorBehavior: ASAP,
-                                intent: FULFILLMENT_BEGIN,
-                                interval: MONTH,
+                                anchors: { day: 15, type: "MONTHDAY" },
+                                preAnchorBehavior: "ASAP",
+                                intent: "FULFILLMENT_BEGIN",
+                                interval: "MONTH",
                                 intervalCount: 1
                             }
                         },
                         pricingPolicies: {
-                            fixed: { adjustmentType: PERCENTAGE, adjustmentValue: { percentage: 10 } }
+                            fixed: { adjustmentType: "PERCENTAGE", adjustmentValue: { percentage: 10 } }
                         },
                         billingPolicy: {
                             recurring: {
-                                interval: MONTH,
+                                interval: "MONTH",
                                 intervalCount: 1,
-                                anchors: { day: 15, type: MONTHDAY }
+                                anchors: { day: 15, type: "MONTHDAY" }
                             }
                         }
                     }
