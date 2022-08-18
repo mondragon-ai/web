@@ -82,6 +82,8 @@ const CREATE_PRODUCTS_MUTATION = `
 export default async function productCreator(session, count = DEFAULT_PRODUCTS_COUNT) {
   const client = new Shopify.Clients.Graphql(session.shop, session.accessToken);
 
+  console.log("85: SESSION - \n", session);
+
   for (let i = 0; i < count; i++) {
     await client.query({
       data: {
