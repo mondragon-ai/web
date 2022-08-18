@@ -10,9 +10,7 @@
     "heroku-postbuild": "cd frontend && npm install && npm run build"
   },
   "type": "module",
-  "engines": {
-    "node": "16.17.0"
-  },
+  "engines": {"npm":"8.1.2","node":"v16.13.2"},
   "main": "index.js",
   "dependencies": {
     "@shopify/shopify-api": "^5.0.0",
